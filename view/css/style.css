@@ -1,0 +1,35 @@
+td{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container_block{
+    text-align: center;
+    padding: 50px;
+}
+
+#msgSubmit{
+    margin-bottom: 0;
+}
+
+#error{
+    color: #ff0000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#button_add_task{
+    margin: 30px;
+}
+
+.text-center{
+    padding: 30px;
+}
+
+.input_field{
+    border: none;
+    background-color: inherit;
+}
