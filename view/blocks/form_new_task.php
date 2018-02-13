@@ -43,7 +43,13 @@
                   <div class="form-group">
                     <label for="images" class="control-label">Прикрепить к задаче изображение: </label>
                     <input type="file" name="images" id = "images">
+                      <img id="blah" src="#" width="70" />
                   </div>
+
+                    <!-- Кнопка, для открытия модального окна -->
+                    <button onclick="fillPreview()" id = "button_preview_task" type="button" class="btn btn-primary" data-toggle="modal" data-target="#previewForm">
+                        Предварительный просмотр
+                    </button>
 
                   <!-- Кнопка, отправляющая форму по технологии AJAX -->
                   <button name="send-message" type="submit" class="btn btn-primary pull-right">Добавить задачу</button>
@@ -57,3 +63,39 @@
           </div>
         </div>
       </div>
+
+<?php include('preview_task.php'); ?>
+
+      <script>
+          //Предпросмотр изображения
+          function readURL(input, id) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+                      $(id).attr('src', e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+          $("#images").change(function(){
+              $("#blah").css("visibility","visible");
+              $("#preview_image").css("visibility","visible");
+              readURL(this, "#blah");
+              readURL(this, "#preview_image");
+          });
+
+
+          //Заполнение предпросмотра
+          function  fillPreview() {
+              // получаем имя, которое ввёл пользователь
+              var name = $("#name").val();
+              // получаем email, который ввёл пользователь
+              var email = $("#email").val();
+              // получаем сообщение, которое ввёл пользователь
+              var message = $("#message").val();
+
+                $("#preview_text").text(message);
+                $("#preview_name").text(name);
+                $("#preview_email").text(email);
+          }
+      </script>

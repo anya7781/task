@@ -33,3 +33,7 @@ a{
     border: none;
     background-color: inherit;
 }
+
+#blah, #preview_image{
+    visibility: hidden;
+}
