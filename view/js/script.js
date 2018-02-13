@@ -37,6 +37,7 @@ $(function () {
 
   // при отправке формы messageForm на сервер (id="messageForm")
   $('#messageForm').submit(function (event) {
+      alert("I'm here");
     // отменим стандартное действие браузера
     event.preventDefault();
     // заведём переменную, которая будет говорить о том валидная форма или нет

@@ -16,7 +16,6 @@
 
     <script src="view/js/jquery.js"></script>
     <script src="view/js/bootstrap.js"></script>
-    <script src="view/js/table-pagination.js"></script>
     <script src="view/js/table-sorter.js"></script>
 
     <script type="text/javascript">
@@ -61,7 +60,7 @@
         $(document).ready(function() {
             $("table")
                 .tablesorter({widthFixed: true, widgets: ['zebra']})
-                .tablesorterPager({container: $("#pager")});
+                // .tablesorterPager({container: $("#pager")});
         });
     </script>
 </head>

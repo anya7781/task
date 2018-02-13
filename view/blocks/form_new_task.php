@@ -47,9 +47,9 @@
                   </div>
 
                     <!-- Кнопка, для открытия модального окна -->
-                    <button onclick="fillPreview()" id = "button_preview_task" type="button" class="btn btn-primary" data-toggle="modal" data-target="#previewForm">
-                        Предварительный просмотр
-                    </button>
+    <!--                    <button onclick="fillPreview()" id = "button_preview_task" type="button" class="btn btn-primary" data-toggle="modal" data-target="#previewForm">-->
+    <!--                        Предварительный просмотр-->
+    <!--                    </button>-->
 
                   <!-- Кнопка, отправляющая форму по технологии AJAX -->
                   <button name="send-message" type="submit" class="btn btn-primary pull-right">Добавить задачу</button>
